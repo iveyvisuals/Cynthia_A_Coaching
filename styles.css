@@ -264,6 +264,8 @@ section.tight{ padding: 70px 0; }
 /* reveal-on-scroll */
 .reveal{ opacity:0; transform: translateY(26px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
 .reveal.in{ opacity:1; transform:none; }
+.reveal-pop{ opacity:0; transform: scale(.94) translateY(14px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.reveal-pop.in{ opacity:1; transform: scale(1) translateY(0); }
 
 /* ---------- Hero ---------- */
 .hero{
@@ -327,6 +329,7 @@ section.tight{ padding: 70px 0; }
 }
 .marquee-track{
   display:flex;
+  align-items:center;
   width: max-content;
   gap: 64px;
   animation: scroll-left 34s linear infinite;
@@ -337,15 +340,26 @@ section.tight{ padding: 70px 0; }
   to{ transform: translateX(-50%); }
 }
 .logo-chip{
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  color: var(--ink-soft);
-  opacity: .55;
-  white-space:nowrap;
-  letter-spacing: .01em;
-  transition: opacity .3s var(--ease);
+  height: 38px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+  flex: none;
+  transition: transform .3s var(--ease);
 }
-.logo-chip:hover{ opacity: 1; color: var(--sage-dark); }
+.logo-chip:hover{ transform: translateY(-3px); }
+.logo-chip-dark{
+  display:inline-flex;
+  align-items:center;
+  flex: none;
+  background: var(--ink);
+  padding: 12px 18px;
+  border-radius: var(--radius-s);
+  transition: transform .3s var(--ease);
+}
+.logo-chip-dark:hover{ transform: translateY(-3px); }
+.logo-chip-dark .logo-chip{ height:24px; }
+.logo-chip-dark:hover .logo-chip{ transform:none; }
 
 /* ---------- Service / card carousel ---------- */
 .carousel{

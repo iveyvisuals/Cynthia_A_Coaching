@@ -22,8 +22,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
   }
 
-  // Reveal on scroll
-  const revealEls = document.querySelectorAll('.reveal');
+  // Reveal on scroll — fade/pop in text and photos as they enter view
+  const revealEls = document.querySelectorAll('.reveal, .reveal-pop');
+
+  // Stagger siblings that reveal together (card grids, pillar rows, etc.)
+  const siblingGroups = new Map();
+  revealEls.forEach(el => {
+    const parent = el.parentElement;
+    if (!siblingGroups.has(parent)) siblingGroups.set(parent, []);
+    siblingGroups.get(parent).push(el);
+  });
+  siblingGroups.forEach(list => {
+    if (list.length > 1) {
+      list.forEach((el, i) => {
+        el.style.transitionDelay = Math.min(i * 0.09, 0.45) + 's';
+      });
+    }
+  });
+
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
