@@ -213,7 +213,16 @@ p:last-child{ margin-bottom: 0; }
 .nav-toggle.open span:nth-child(3){ top:10px; transform: rotate(-45deg); }
 
 /* ---------- Breathing ring signature motif ---------- */
-.breath-wrap{ position:relative; display:flex; align-items:center; justify-content:center; }
+.breath-wrap{ position:relative; display:flex; align-items:center; justify-content:center; width:78%; height:78%; }
+.breath-wrap img{
+  width:100%; height:100%;
+  object-fit:cover;
+  border-radius:50%;
+  display:block;
+  position:relative;
+  z-index:1;
+  box-shadow: 0 20px 45px -20px rgba(43,52,42,0.35);
+}
 .breath-ring{
   position:absolute;
   border:1px solid var(--gold-light);
@@ -778,17 +787,17 @@ section.tight{ padding: 70px 0; }
 
 .about-cynthia {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 0.9fr 1.1fr;
   gap: 70px;
   align-items: center;
 }
 
 .about-image {
-  order: 2;
+  order: 1;
 }
 
 .about-content {
-  order: 1;
+  order: 2;
   text-align: left;
 }
 
