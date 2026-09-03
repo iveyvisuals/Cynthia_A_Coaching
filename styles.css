@@ -552,19 +552,6 @@ section.tight{ padding: 70px 0; }
   transition: transform 1s var(--ease);
 }
 .split-media:hover img{ transform: scale(1.035); }
-.split-media .media-caption{
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 11.5px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  padding: 9px 16px;
-  border-radius: var(--radius-s);
-}
 @media (prefers-reduced-motion: reduce){
   .split-media img{ transition: none; }
 }
