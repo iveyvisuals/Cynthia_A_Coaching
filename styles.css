@@ -267,6 +267,13 @@ section.tight{ padding: 70px 0; }
 .reveal-pop{ opacity:0; transform: scale(.94) translateY(14px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
 .reveal-pop.in{ opacity:1; transform: scale(1) translateY(0); }
 
+/* Hero text — fades in on page load (always above the fold, no scroll trigger needed) */
+@keyframes hero-fade-in{
+  from{ opacity:0; transform: translateY(22px); }
+  to{ opacity:1; transform: none; }
+}
+.hero-reveal{ animation: hero-fade-in 1s var(--ease) both; }
+
 /* ---------- Hero ---------- */
 .hero{
   padding: 60px 0 100px;
@@ -348,18 +355,6 @@ section.tight{ padding: 70px 0; }
   transition: transform .3s var(--ease);
 }
 .logo-chip:hover{ transform: translateY(-3px); }
-.logo-chip-dark{
-  display:inline-flex;
-  align-items:center;
-  flex: none;
-  background: var(--ink);
-  padding: 12px 18px;
-  border-radius: var(--radius-s);
-  transition: transform .3s var(--ease);
-}
-.logo-chip-dark:hover{ transform: translateY(-3px); }
-.logo-chip-dark .logo-chip{ height:24px; }
-.logo-chip-dark:hover .logo-chip{ transform:none; }
 
 /* ---------- Service / card carousel ---------- */
 .carousel{
