@@ -266,6 +266,8 @@ section.tight{ padding: 70px 0; }
 .section-deep p{ color: rgba(250,248,243,0.75); }
 .section-deep .eyebrow{ color: var(--gold-light); }
 .section-deep .eyebrow::before{ background: var(--gold-light); }
+.section-deep .audience-card h3{ color: var(--ink); }
+.section-deep .audience-card p{ color: var(--ink-soft); }
 
 .section-head{ max-width: 720px; margin-bottom: 56px; }
 .section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
