@@ -482,6 +482,7 @@ section.tight{ padding: 70px 0; }
 
 /* ---------- Contact form ---------- */
 .contact-form{ display:flex; flex-direction:column; gap:18px; margin-top:8px; }
+.contact-form[hidden]{ display:none; }
 .contact-field label{
   display:block;
   font-size: 12px;
