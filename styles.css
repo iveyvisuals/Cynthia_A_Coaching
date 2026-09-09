@@ -645,6 +645,38 @@ section.tight{ padding: 70px 0; }
 .audience-card h3{ font-size:1.15rem; margin-bottom:10px; }
 .audience-card p{ font-size:14.5px; }
 
+/* ---------- Media appearances (podcast / video embeds) ---------- */
+.media-card{
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 26px;
+  display:flex; flex-direction:column; gap:16px;
+}
+.media-card-label{
+  display:flex; align-items:center; gap:10px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+}
+.media-card-label svg{ width:16px; height:16px; stroke: var(--gold); flex:none; }
+.media-embed{ border-radius: var(--radius-s); overflow:hidden; background: var(--sage-pale); }
+.media-embed iframe{ width:100%; display:block; border:0; height:352px; }
+.media-embed-video{ aspect-ratio: 16/9; }
+.media-embed-video iframe{ height:100%; }
+.media-card-title{ font-size:15px; color: var(--ink); font-weight:500; }
+.media-card-source{ font-size:13px; color: var(--ink-soft); }
+@media (max-width: 640px){
+  .media-appearances .container{ padding-left:16px; padding-right:16px; }
+  .media-appearances .media-card{ padding-left:0; padding-right:0; }
+  .media-appearances .media-card-label,
+  .media-appearances .media-card-title,
+  .media-appearances .media-card-source{ padding:0 16px; }
+  .media-appearances .media-embed{ border-radius:0; }
+}
+
 /* ---------- Benefit list ---------- */
 .check-list{ display:flex; flex-direction:column; gap:16px; margin-top: 8px; }
 .check-list li{ display:flex; gap:14px; align-items:flex-start; color: var(--ink-soft); font-size:15.5px; }
