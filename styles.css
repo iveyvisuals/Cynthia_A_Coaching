@@ -573,13 +573,9 @@ section.tight{ padding: 70px 0; }
 .stars{ color: var(--gold); font-size: 14px; letter-spacing: 2px; }
 .testimonial-quote{ font-family: var(--font-display); font-size: 1.08rem; color: var(--ink); font-style: italic; line-height:1.5; }
 .testimonial-who{ display:flex; align-items:center; gap:12px; margin-top:auto; }
-.testimonial-avatar{
-  width:40px; height:40px; border-radius:50%;
-  background: var(--sage-pale);
-  flex:none;
-}
-.testimonial-name{ font-size:14px; font-weight:500; color: var(--ink); }
-.testimonial-role{ font-size:12.5px; color: var(--ink-soft); }
+.testimonial-avatar{ display:none; }
+.testimonial-name{ font-size:14px; font-weight:500; color: var(--sage-dark); }
+.testimonial-role{ font-size:12.5px; color: var(--sage-dark); }
 
 .testimonial-featured{
   display:flex;
