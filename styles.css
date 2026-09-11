@@ -750,6 +750,13 @@ section.tight{ padding: 70px 0; }
 }
 .event-meta{ display:flex; gap:22px; margin-top:16px; font-size:13.5px; color: var(--ink-soft); flex-wrap:wrap; }
 .event-meta span{ display:flex; align-items:center; gap:7px; }
+.event-empty{
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: 64px 40px;
+  text-align: center;
+}
 .event-meta svg{ width:15px; height:15px; stroke: var(--gold); }
 
 .empty-events{
