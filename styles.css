@@ -531,7 +531,7 @@ section.tight{ padding: 70px 0; }
   border-radius: var(--radius-l);
   overflow: hidden;
   box-shadow: 0 24px 60px rgba(43,52,42,0.18);
-  aspect-ratio: 1080 / 610;
+  aspect-ratio: 1080 / 604;
   background: var(--sage-pale);
 }
 .intro-video video{ width:100%; height:100%; display:block; object-fit:cover; }
