@@ -56,27 +56,10 @@
       <div class="split-body">
         <div class="eyebrow">Calm Through EFT Tapping</div>
         <h2>Calm Through EFT Tapping Mini-Course</h2>
-        <p style="margin-bottom:28px;">Sign up below to get instant access to your free mini-course.</p>
+        <p style="margin-bottom:28px;">Click below to get instant access to your free mini-course.</p>
 
-        <form id="mini-course-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="214678ad-283f-4f84-b517-293639edfcf1">
-          <input type="hidden" name="subject" value="New EFT mini-course signup from the Cynthia A. Coaching website">
-          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-          <div class="contact-field">
-            <label for="mc-name">First Name</label>
-            <input id="mc-name" name="first_name" type="text" required autocomplete="given-name">
-          </div>
-          <div class="contact-field">
-            <label for="mc-email">Email</label>
-            <input id="mc-email" name="email" type="email" required autocomplete="email">
-          </div>
-          <button type="submit" class="btn btn-gold">Get Your Free Mini-Course Now</button>
-        </form>
-
-        <div id="mini-course-success" class="contact-success" hidden>
-          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></div>
-          <h3>You're in!</h3>
-          <p>Check your inbox — your free mini-course is on its way.</p>
+        <div class="btn-row">
+          <a href="https://go.cynthiacoaching.com/eft" class="btn btn-gold">Get Your Free Mini-Course Now</a>
         </div>
 
         <p class="contact-note">No spam, ever. Unsubscribe anytime.</p>
@@ -181,34 +164,5 @@
 </footer>
 
 <script src="script.js"></script>
-<script>
-  (function(){
-    var form = document.getElementById('mini-course-form');
-    if (!form) return;
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      var btn = form.querySelector('button[type=submit]');
-      var original = btn.textContent;
-      btn.textContent = 'Sending…';
-      btn.disabled = true;
-      fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      }).then(function(res){ return res.json(); }).then(function(data){
-        if (data.success) {
-          form.hidden = true;
-          document.getElementById('mini-course-success').hidden = false;
-        } else {
-          throw new Error(data.message || 'Submission failed');
-        }
-      }).catch(function(){
-        btn.textContent = original;
-        btn.disabled = false;
-        alert("Something went wrong signing you up — please email cynthia.a.coach@gmail.com directly.");
-      });
-    });
-  })();
-</script>
 </body>
 </html>
