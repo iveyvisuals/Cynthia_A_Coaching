@@ -881,15 +881,6 @@ section.tight{ padding: 70px 0; }
   z-index: 0;
 }
 
-/* Readability scrim so hero text stays legible over whatever the photo shows underneath it */
-.hero-scrim{
-  position: absolute;
-  inset: 0;
-  height: 83%;
-  background: linear-gradient(90deg, var(--bg) 0%, var(--bg) 62%, rgba(250,248,243,0) 88%);
-  pointer-events: none;
-}
-
 /* Text/content sits on top of image */
 .hero-grid > .reveal {
   position: relative;
