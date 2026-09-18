@@ -195,6 +195,7 @@ p:last-child{ margin-bottom: 0; }
   background: var(--gold);
 }
 .header-cta{ display:flex; align-items:center; gap:18px; }
+.main-nav-cta{ display:none; }
 .nav-toggle{
   display:none;
   background:none; border:none;
@@ -838,6 +839,12 @@ section.tight{ padding: 70px 0; }
   .event-date{ border-right:none; border-bottom:1px solid var(--line); padding-right:0; padding-bottom:20px; }
 }
 @media (max-width: 720px){
+  /* backdrop-filter makes .site-header the containing block for its
+     fixed-position descendants, which was collapsing .main-nav's
+     inset(74px 0 0 0) down to the header's own ~74px height instead
+     of the full viewport. Disable it here so the mobile menu panel
+     covers the full screen as intended. */
+  .site-header{ backdrop-filter:none; }
   .main-nav{
     position:fixed; inset: 74px 0 0 0;
     background: var(--bg);
@@ -851,8 +858,20 @@ section.tight{ padding: 70px 0; }
   }
   .main-nav.open{ opacity:1; transform:none; pointer-events:auto; }
   .main-nav a{ font-size: 20px; }
+  .main-nav-cta{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    width:100%;
+    margin-top:10px;
+    padding-top:26px;
+    border-top:1px solid var(--line);
+  }
+  .main-nav .main-nav-cta .btn{ width:100%; font-size:14.5px; }
+  .main-nav .main-nav-cta .btn-primary{ color: var(--bg); }
+  .main-nav .main-nav-cta .btn-ghost{ color: var(--sage-dark); }
   .nav-toggle{ display:block; }
-  .header-cta .btn-ghost{ display:none; }
+  .header-cta{ display:none; }
   section{ padding: 76px 0; }
   .grid-3, .grid-4{ grid-template-columns: 1fr; }
   .offer{ padding: 40px 26px; }
