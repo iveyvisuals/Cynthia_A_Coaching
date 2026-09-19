@@ -884,7 +884,7 @@ section.tight{ padding: 70px 0; }
 .hero-grid {
   position: static;
   width: 100%;
-  min-height: 700px;
+  min-height: 560px;
   display: flex;
   align-items: center;
 }
