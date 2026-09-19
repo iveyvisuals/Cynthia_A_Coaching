@@ -899,6 +899,13 @@ section.tight{ padding: 70px 0; }
   object-position: 80% center;
   z-index: 0;
 }
+@media (max-width: 720px){
+  /* On narrow screens the hero box is much taller than it is wide,
+     so the image crops horizontally instead of vertically -- 80%
+     lands squarely on Cynthia's face, right under the heading text.
+     Shift to the left side of the photo (plain wall) instead. */
+  .hero-grid > img{ object-position: 15% center; }
+}
 
 /* Text/content sits on top of image */
 .hero-grid > .reveal {

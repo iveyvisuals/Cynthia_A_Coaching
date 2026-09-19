@@ -60,7 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const prev = wrapper.querySelector('[data-prev]');
     const next = wrapper.querySelector('[data-next]');
     if (!track) return;
-    const scrollAmount = () => Math.min(360, track.clientWidth * 0.85);
+    const scrollAmount = () => {
+      const card = track.querySelector(':scope > *');
+      if (!card) return Math.min(360, track.clientWidth * 0.85);
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      return card.getBoundingClientRect().width + gap;
+    };
     if (prev) prev.addEventListener('click', () => track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' }));
     if (next) next.addEventListener('click', () => track.scrollBy({ left: scrollAmount(), behavior: 'smooth' }));
   });
