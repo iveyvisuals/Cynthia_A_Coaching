@@ -599,8 +599,8 @@ section.tight{ padding: 70px 0; }
   border-radius: var(--radius-m);
   padding: 46px;
   margin-top: 32px;
-  margin-bottom: 48px;
 }
+.testimonial-featured + .testimonial-featured{ margin-top: 48px; }
 .testimonial-featured-logo{
   flex:none;
   width:180px; height:180px;
