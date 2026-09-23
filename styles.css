@@ -596,8 +596,9 @@ section.tight{ padding: 70px 0; }
   gap:48px;
   background: var(--bg);
   border: 1px solid var(--line);
-  border-radius: var(--radius-l);
+  border-radius: var(--radius-m);
   padding: 46px;
+  margin-top: 32px;
   margin-bottom: 48px;
 }
 .testimonial-featured-logo{
