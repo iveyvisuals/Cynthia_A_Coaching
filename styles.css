@@ -629,6 +629,7 @@ section.tight{ padding: 70px 0; }
 
 /* ---------- CTA band ---------- */
 #book{ padding-top: 40px; }
+#offer{ padding-top: 40px; }
 .cta-band{
   background: var(--sage-dark);
   border-radius: var(--radius-l);
