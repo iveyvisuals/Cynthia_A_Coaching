@@ -805,6 +805,8 @@ section.tight{ padding: 70px 0; }
 .footer-col ul{ display:flex; flex-direction:column; gap:12px; }
 .footer-col a{ font-size:14.5px; color: rgba(250,248,243,0.75); transition: color .3s var(--ease); }
 .footer-col a:hover{ color: var(--bg); }
+.footer-col a.btn{ font-size:14.5px; color: var(--bg); }
+.footer-col a.btn:hover{ color: var(--bg); }
 .footer-col .offer-form input[type=email]{
   background: rgba(250,248,243,0.1);
   border-color: rgba(250,248,243,0.35);
