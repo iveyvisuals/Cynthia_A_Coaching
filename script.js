@@ -8,6 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
+  // Expose the real header height so the homepage hero can fill exactly the rest of the first screen
+  const setHeaderHeight = () => {
+    document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+  };
+  setHeaderHeight();
+  window.addEventListener('resize', setHeaderHeight);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(setHeaderHeight);
+
   // Mobile nav toggle
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.main-nav');
