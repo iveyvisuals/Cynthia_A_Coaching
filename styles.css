@@ -179,7 +179,7 @@ p:last-child{ margin-bottom: 0; }
   gap: 36px;
 }
 .main-nav a{
-  font-size: 12px;
+  font-size: 13.5px;
   letter-spacing: 0.02em;
   color: var(--ink-soft);
   position: relative;
@@ -194,7 +194,8 @@ p:last-child{ margin-bottom: 0; }
   height:1px;
   background: var(--gold);
 }
-.header-cta{ display:flex; align-items:center; gap:18px; }
+.header-cta{ display:flex; align-items:center; gap:14px; }
+.header-cta .btn{ padding: 11px 22px; font-size: 13.5px; }
 .main-nav-cta{ display:none; }
 .nav-toggle{
   display:none;
