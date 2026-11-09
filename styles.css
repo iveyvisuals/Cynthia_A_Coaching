@@ -786,6 +786,11 @@ section.tight{ padding: 70px 0; }
 .event-body h3{ font-size: clamp(1.25rem, 2vw, 1.6rem); }
 .event-actions{ display:flex; flex-direction:column; gap:12px; align-items:stretch; }
 .event-actions .btn{ min-width: 190px; }
+.event-card{ align-items:start; }
+.event-date{ align-self:stretch; }
+.event-caption{ margin-top:18px; max-width:62ch; }
+.event-caption p{ font-size:15px; line-height:1.7; margin:0 0 .9em; }
+.event-caption p:last-child{ margin-bottom:0; }
 
 .empty-events{
   border: 1px dashed var(--line);
@@ -863,6 +868,7 @@ section.tight{ padding: 70px 0; }
   .event-date{ border-right:none; border-bottom:1px solid var(--line); padding-right:0; padding-bottom:20px; }
   .event-meta{ justify-content:center; }
   .event-actions{ align-items:center; }
+  .event-caption{ text-align:left; max-width:none; }
 }
 @media (max-width: 720px){
   /* backdrop-filter makes .site-header the containing block for its
